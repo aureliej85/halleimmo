@@ -1,0 +1,46 @@
+[
+    {
+       "image": "home-1.jpeg",
+       "titre": "C'est une maison",
+       "ville": "Crécy la Chapelle",
+       "dpt": "77",
+       "pieces": "5",
+       "chambres": "3",
+       "surface": "130",
+       "id": "1",
+       "type": "maison",
+       "galery": [
+          "home-2.jpeg",
+          "home-1.jpeg",
+          "home-3.jpeg"
+       ],
+       "dpe": "A",
+       "ges": "G",
+       "description": "Belle maison édifiée sur sous-sol total sur près de 4000m² de terrain sans aucun vis à vis. Elle se compose au RDC d'une vaste entrée , d'une chambre, d'un WC , d'une cuisine équipée, et d'un séjour de plus de 50 m² . Au 1er étage, 3 belles chambres dont une suite parentale avec dressing et salle de bains, WC indépendant et une salle de douche. Propriété idéale pour une famille, dans une commune proche de l'A4 avec écoles commerces et gare. A voir absolument. Contactez moi pour plus de renseignements. Nicolas 06.61.09.34.52",
+       "prix": "630 000",
+       "terrain": "3900",
+       "annee": "1980"
+    },
+    {
+       "image": "home-2.jpeg",
+       "titre": "C'est une maison",
+       "ville": "Crécy la Chapelle",
+       "dpt": "77",
+       "pieces": "5",
+       "chambres": "3",
+       "surface": "130",
+       "id": "2",
+       "type": "maison",
+       "galery": [
+          "home-2.jpeg",
+          "home-1.jpeg",
+          "home-3.jpeg"
+       ],
+       "dpe": "D",
+       "ges": "B",
+       "description": "Belle maison édifiée sur sous-sol total sur près de 4000m² de terrain sans aucun vis à vis. Elle se compose au RDC d'une vaste entrée , d'une chambre, d'un WC , d'une cuisine équipée, et d'un séjour de plus de 50 m² . Au 1er étage, 3 belles chambres dont une suite parentale avec dressing et salle de bains, WC indépendant et une salle de douche. Propriété idéale pour une famille, dans une commune proche de l'A4 avec écoles commerces et gare. A voir absolument. Contactez moi pour plus de renseignements. Nicolas 06.61.09.34.52",
+       "prix": "630 000",
+       "terrain": "3900",
+       "annee": "1980"
+    }
+ ]

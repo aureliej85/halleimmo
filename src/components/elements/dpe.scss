@@ -1,0 +1,35 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.dpe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__box {
+        width: 30px;
+        height: 20px;
+        margin-right: 10px;
+        border : 1px solid variables.$dark_color; 
+        border-radius: 5px;
+        color: #fff;
+       
+    }
+
+    
+}
+
+.big {
+    width: 35px !important;
+    height: 25px !important;
+    border : 3px solid variables.$dark_color !important; 
+    @include mixins.text(20px, 600, #fff);
+}
+
+#A{background-color: #479264};
+#B{background-color: #54a64a};
+#C{background-color: #6db56b};
+#D{background-color: #f2e32f};
+#E{background-color: #edac31};
+#F{background-color: #e87832};
+#G{background-color: #d2382d};

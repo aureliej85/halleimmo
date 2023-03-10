@@ -1,0 +1,15 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.honoraires {
+    margin: auto;
+    padding: 30px 0 50px 0;
+
+    h1 {
+        @include mixins.text(35px, 700, variables.$dark_color);
+    }
+
+    img {
+        max-width: 550px;
+    }
+}

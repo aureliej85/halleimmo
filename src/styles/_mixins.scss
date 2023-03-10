@@ -1,0 +1,40 @@
+@use "./variables";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+@mixin text($size, $weight, $color) {
+  font-family: Raleway;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+@mixin textNumber($size, $weight, $color) {
+  font-family: Roboto;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin textStyle($size, $weight, $color) {
+  font-family: 'Raleway';
+  letter-spacing: .3vw;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+// 501px à 992px
+@mixin tablet {
+  @media screen and (min-width: map-get(variables.$breakpoints, mobile-max)) and (max-width: map-get(variables.$breakpoints, desktop-min)) {
+    @content;
+  }
+}
+
+// max 500px
+@mixin mobile {
+  @media screen and (max-width: map-get(variables.$breakpoints, mobile-min)) {
+    @content;
+  }
+}

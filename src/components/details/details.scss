@@ -1,0 +1,202 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+
+.details {
+
+    &__slide {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px 0 20px 0;
+        img{
+            max-width: 900px;
+        }
+    }
+
+    &__about{
+        max-width: 900px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+
+        &__descr {
+            width: 100%;
+            background-color: #eeeeee;
+            border-radius: 5px;
+            padding: 20px;
+
+            h1{
+                text-align: left;
+                @include mixins.text(30px, 600, variables.$dark_color);
+            }
+
+            &__prices{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                &__home {
+                    // text-align: left;
+                    @include mixins.textNumber(25px, 500, variables.$dark_color);
+                }
+
+                &__m2{
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: 50px;
+                    div {
+                        margin-left: 10px;
+                    }
+                    
+                }
+                
+            }
+
+            p {
+                text-align: left;
+                @include mixins.text(17px, 500, variables.$dark_color);
+            }
+
+            &__icons {
+                display: flex;
+                flex-direction: row;
+
+                &__box{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-right: 25px;
+                    @include mixins.text(15px, 400, variables.$dark_color);
+    
+                    &__icon {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-around;
+                    }
+
+                }
+            }
+        }
+    }
+
+    &__descr {
+        max-width: 900px;
+        margin: auto;
+        padding: 30px 0 30px 0;
+
+        h2{
+            text-align: left;
+            @include mixins.text(20px, 600, variables.$dark_color);
+
+        }
+
+        p{
+            text-align: justify;
+            @include mixins.text(18px, 400, variables.$dark_color);
+
+        }
+        
+    }
+
+    &__enum {
+        max-width: 900px;
+        margin: auto;
+
+        h2 {
+            text-align: left;
+            @include mixins.text(20px, 600, variables.$dark_color);
+        }
+
+        p{
+            text-align: justify;
+            @include mixins.text(17px, 400, variables.$dark_color);
+
+        }
+
+        &__list {
+            display : flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            @include mixins.text(15px, 400, variables.$dark_color);
+
+            div {
+                padding: 10px 20px 10px 0;
+                text-align: left;
+              
+            }
+        }
+    }
+
+    &__diagnostique {
+        padding: 50px 0 50px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: auto;
+        max-width: 900px;
+    }
+
+    @include mixins.mobile{
+        padding : 0 20px 0 20px;
+
+        &__slide {
+            padding: 0 0 20px 0;
+
+        }
+
+        &__about {
+            &__descr {
+                h1 {
+                    @include mixins.text(20px, 600, variables.$dark_color);
+
+                }
+
+                &__prices {
+                    &__home {
+                        @include mixins.textNumber(17px, 500, variables.$dark_color);
+                    }
+                }
+
+                p {
+                    @include mixins.text(15px, 500, variables.$dark_color);
+                }
+            }
+        }
+
+        &__descr{
+            p {
+                @include mixins.text(15px, 400, variables.$dark_color);
+
+            }
+        }
+
+        // &__enum {
+
+        //     &__list {
+        //         justify-content: space-between;
+
+        //         &__cat {
+        //             width: 40%;
+
+        //             div {
+        //                 display: flex;
+        //                 align-items: center;
+        //             }
+        //         }
+                
+        //     }
+        // }
+
+        &__diagnostique {
+            flex-direction: column;
+            
+            div {
+                h3{
+                    text-align: left;
+                }
+            }
+
+        }
+    }
+}

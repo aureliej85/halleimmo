@@ -1,0 +1,68 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+
+.search {
+    background-color: #0000008f;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+    border-radius: 5px;
+    align-items: center;
+    animation: zoom-in 1s ease 700ms 1 normal forwards;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+
+        span {
+            @include mixins.text(20px, 400, #fff)
+        }
+
+
+         input{
+            padding: 10px;
+            border: 1px solid rgba(128, 128, 128, 0.2);
+            margin-top: 5px;
+            border-radius: 5px;
+            @include mixins.text(15px, 400, grey)
+         }
+    }
+
+    &__button{
+        padding-top: 23px;
+        button {
+            color: #fff
+
+        }
+        
+    }
+
+    @include mixins.mobile{
+        flex-direction: column;
+        padding: 20px;
+    }
+   
+}
+
+#type-select {
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    margin-top: 5px;
+    border-radius: 5px;
+    @include mixins.text(15px, 400, grey)
+
+}
+
+
+@keyframes zoom-in {
+    0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

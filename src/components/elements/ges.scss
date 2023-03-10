@@ -1,0 +1,35 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.ges {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__box {
+        width: 30px;
+        height: 20px;
+        margin-right: 10px;
+        border : 1px solid variables.$dark_color; 
+        border-radius: 5px;
+        color: #fff;
+       
+    }
+
+   
+}
+
+.big {
+    width: 35px !important;
+    height: 25px !important;
+    border : 3px solid variables.$dark_color !important; 
+    @include mixins.text(20px, 600, #fff);
+}
+
+#Ages{background-color: #99d5f7};
+#Bges{background-color: #80abcd};
+#Cges{background-color: #6D87A8};
+#Dges{background-color: #546384};
+#Eges{background-color: #434665};
+#Fges{background-color: #332D47};
+#Gges{background-color: #231A2F};

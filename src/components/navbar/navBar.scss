@@ -1,0 +1,88 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: #fff;
+    box-shadow: 0 5px 30px rgb(0 22 84 / 10%);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+
+    &__drawer{
+        display: none;
+    }
+
+    &__logo {
+        margin-left: 20px;
+        img {
+            width: 170px;
+        }
+    }
+
+    &__menu{
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            @include mixins.text(17px, 500, variables.$dark_color);
+        
+
+            a{
+                text-decoration: none;
+                margin-left: 20px;
+                color: variables.$dark_color;
+                transition: 0.5s;
+
+                &:hover {
+                    color: variables.$primary_color;
+                }
+            }
+
+        }
+        
+    }
+
+    &__cta{
+        padding-right: 20px;
+
+        a {
+            text-decoration: none;
+        }
+
+        button{
+            color: #fff !important;
+            font-weight: 600;
+        }
+        
+    }
+
+
+    @include mixins.mobile{
+        &__drawer{
+            display: block;
+
+        }
+
+        &__logo {
+            img {
+                width: 100px;
+            }
+        }
+
+        &__menu{
+            display: none;
+        }
+
+        &__cta {
+            display: none;
+        }
+
+    }
+}

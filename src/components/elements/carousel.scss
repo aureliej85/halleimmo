@@ -1,0 +1,110 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.carrousel {
+  height: 515px;
+  max-width: 1240px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+
+//   img {
+//     width: 1240px;
+//     height: 515px;
+//     min-width: 100%;
+//     max-width: 100%;
+//     min-height: 100%;
+//     max-height: 100%;
+//     object-fit: cover;
+//     border-radius: 10px;
+//   }
+
+  &__previous {
+    border: none;
+    background-color: transparent;
+
+    img {
+      height: 80px;
+      width: 45px;
+      position: absolute;
+      top: 50%;
+      left: 15px;
+    }
+  }
+
+  &__next {
+    border: none;
+    background-color: transparent;
+
+    img {
+      height: 80px;
+      width: 45px;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+    }
+  }
+    
+  &__number {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    @include mixins.text(18px, 500, white);
+  }
+
+  @include mixins.mobile {
+    // margin: auto;
+    // height: 255px;
+    // max-width: 335px;
+    // border-radius: 10px;
+
+    // img {
+    //   width: 335px;
+    //   height: 255px;
+    //   object-fit: cover;
+    //   border-radius: 10px;
+    // }
+
+    &__previous img {
+      height: 40px;
+      width: 24px;
+    }
+
+    &__next img {
+      height: 40px;
+      width: 24px;
+    }
+
+    &__number {
+      display: none;
+    }
+  }
+
+  @include mixins.tablet {
+    margin: auto;
+    height: 255px;
+    max-width: 768px;
+    border-radius: 10px;
+
+    img {
+      width: 768px;
+      height: 255px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    &__previous img {
+      height: 20px;
+      width: 12px;
+    }
+
+    &__next img {
+      height: 20px;
+      width: 12px;
+    }
+
+    &__number {
+      display: none;
+    }
+  }
+}

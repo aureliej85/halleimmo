@@ -1,0 +1,93 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin-bottom: 50px;
+    border : 1px solid #b5b5b5;
+    border-radius: 5px;
+    box-shadow: 3px 5px 5px #c6c6c6;
+    transition: box-shadow 0.3s ease-in;
+
+    &:hover{
+
+        box-shadow: 7px 5px 5px #949494;
+
+    }
+
+    &__image {
+        width: 350px;
+        // height: 100px;
+        height: 300px;
+
+        img {
+            width: 350px;
+            height: 300px;
+            object-fit: cover;   
+        }
+    }
+
+    &__content{
+
+        &__title{
+            padding: 5px 0 0 15px;
+            height: 50px;
+            text-align: left;
+            @include mixins.text(18px, 600, variables.$dark_color);
+        }
+        &__ville{
+            padding: 5px 0 15px 15px;
+            text-align: left;
+            @include mixins.text(14px, 400, variables.$dark_color);
+            display: flex;
+            align-items: center;
+        }
+
+        &__details{
+            padding: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid #dad9d9;
+
+            &__box{
+                display: flex;
+                flex-direction: column;
+                @include mixins.text(15px, 400, variables.$dark_color);
+
+                &__icon {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                }
+            }
+
+           
+        }
+
+    }
+
+
+    @include mixins.mobile{
+
+        &__content {
+
+            &__title{
+                height: auto;
+            }
+
+            &__ville{
+                display: flex;
+                align-items: center;
+                padding: 10px 0 15px 15px;
+            }
+        }
+    }
+
+
+}

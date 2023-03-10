@@ -1,0 +1,9 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.puce {
+    border-radius: 25px;
+    background-color: variables.$primary_color;
+    @include mixins.text(12px, 500, #FFFFFF);
+    padding: 5px 15px;
+}

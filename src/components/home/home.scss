@@ -1,0 +1,186 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+
+.homePage {
+    display: flex;
+    flex-direction: column;
+
+    &__subHero {
+        padding: 30px 0 30px 0;
+
+        &__box{
+            display: flex;
+            flex-direction: row; 
+            max-width: 1200px;
+            margin: auto;
+            align-items: center;
+
+            &__title{
+                padding: 20px;
+                h2 {
+                    @include mixins.text(50px, 500, variables.$dark_color);
+                    text-align: right;
+                }
+            }
+
+            &__text {
+                padding: 20px;
+                border-left: 1px solid variables.$primary_color;
+                p {
+                    @include mixins.text(20px, 400, variables.$dark_color);
+                    text-align: left;
+
+                }
+            }
+
+        }
+        
+
+        
+    }
+
+    &__newsletter {
+        padding: 10px 0 10px 0;
+        background-color: #eeeeee;
+
+        &__box{
+            display: flex;
+            flex-direction: row; 
+            max-width: 1200px;
+            margin: auto;
+            align-items: center;
+
+            &__title{
+                width: 50%;
+                padding: 20px;
+                h2 {
+                    @include mixins.text(50px, 500, variables.$dark_color);
+                    text-align: right;
+                }
+
+                p {
+                    text-align: right;
+                }
+            }
+
+            &__text {
+                padding: 20px;
+                border-left: 1px solid variables.$primary_color;
+                display: flex;
+                flex-direction: row;
+
+                img {
+                    width: 50px;
+                    margin-right: 15px;
+                    cursor: pointer;
+                }
+            }
+
+        }
+        
+
+        
+    }
+
+    &__cards {
+
+        &__box {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content :space-between;
+
+            a{
+                text-decoration: none;
+            }
+        }
+
+        &__link {
+            display: flex;
+            justify-content: center;
+            @include mixins.text(17px, 600, variables.$dark_color);
+
+            span {
+                margin-left : 15px;
+                padding-bottom: 80px;
+
+                a{
+                    text-decoration: none;
+                }
+            }
+
+        }
+    }
+
+    @include mixins.mobile{
+
+        &__subHero{
+            padding: 0 20px 0 20px;
+            &__box{
+                flex-direction: column; 
+
+                &__title{
+                    padding: 20px 0 0 0;
+
+                    h2 {
+                        @include mixins.text(40px, 500, variables.$dark_color);
+                        text-align: left;
+                    }
+                }
+
+                &__text {
+                    padding: 5px 0 20px 0;
+                    border-left: 0px solid variables.$primary_color;
+
+                    p {
+                        @include mixins.text(20px, 400, variables.$dark_color);
+                        text-align: left;
+    
+                    }
+                }
+
+            }
+        }
+        &__newsletter{
+            padding: 0 20px 0 20px;
+            &__box{
+                flex-direction: column; 
+
+                &__title{
+                    padding: 20px 0 0 0;
+
+                    h2 {
+                        @include mixins.text(40px, 500, variables.$dark_color);
+                        text-align: left;
+                    }
+                }
+
+                &__text {
+                    padding: 5px 0 20px 0;
+                    border-left: 0px solid variables.$primary_color;
+
+                    p {
+                        @include mixins.text(20px, 400, variables.$dark_color);
+                        text-align: left;
+    
+                    }
+                }
+
+            }
+        }
+
+        &__cards{
+            
+
+            &__box {
+                padding: 0 20px 0 20px;
+
+                justify-content: center;
+            }
+            
+        }
+    }
+}

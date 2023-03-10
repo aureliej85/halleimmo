@@ -1,0 +1,46 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.about {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 50px 0 50px 0;
+
+    img {
+     
+        max-width: 300px;
+        margin: auto;
+    }
+
+    p {
+        padding : 30px 0 40px 0;
+        @include mixins.text(20px, 400, variables.$dark_color)
+    }
+
+    &__pics{
+        max-width: 1000px;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        justify-content: space-between;
+
+        &__div {
+
+            img{
+                margin-right: 20px;
+                max-height: 200px;
+                border-radius: 10px;
+            }
+
+            div {
+                padding: 15px 0 15px 0;
+            }
+
+        }
+
+        
+    }
+}
